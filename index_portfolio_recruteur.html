@@ -1,348 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abou Diop | Data Analyst Junior</title>
-  <meta name="description" content="Portfolio one-page d'Abou Diop, étudiant en BUT Science des Données, orienté Data Analyst Junior." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1d4ed8',
-            secondary: '#eff6ff',
-            ink: '#0f172a',
-            soft: '#475569'
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(15, 23, 42, 0.08)'
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abou Diop — Portfolio BUT Science des Données</title>
+<meta name="description" content="Portfolio BUT Science des Données d'Abou Diop : parcours, alternance, projets, compétences et projet professionnel."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0c10;--ink2:#111318;--surface:#16191f;--surface2:#1c1f27;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --text:#e4e6ed;--muted:#9aa0ad;--faint:#5d6475;
+  --accent:#e8ff47;--accent-rgb:232,255,71;
+  --r:14px;--max:1120px;
+  --mono:'JetBrains Mono',monospace;--sans:'Inter',sans-serif;--display:'Syne',sans-serif;
+}
+html{scroll-behavior:smooth}body{font-family:var(--sans);font-size:16px;line-height:1.7;background:var(--ink);color:var(--text);overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%;height:auto}.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;height:60px;background:rgba(10,12,16,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(var(--accent-rgb),.6);animation:blink 3s ease-in-out infinite;flex-shrink:0}@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.nav-links{display:flex;gap:2px}.nav-links a{font-size:.76rem;color:var(--muted);padding:6px 9px;border-radius:99px;font-family:var(--mono);transition:color .15s,background .15s}.nav-links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(90px,15vw,130px) clamp(16px,4vw,40px) clamp(48px,8vw,80px);position:relative;overflow:hidden}.hero-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--display);font-size:clamp(80px,18vw,260px);font-weight:800;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.04);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.04em;line-height:1}.hero-content{max-width:var(--max);margin:0 auto;width:100%;position:relative}.hero-tag{font-family:var(--mono);font-size:clamp(.65rem,.8rem + .1vw,.75rem);color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:clamp(18px,3vw,28px);display:flex;align-items:center;gap:10px;flex-wrap:wrap}.hero-tag::before{content:'';width:24px;height:1px;background:var(--accent);flex-shrink:0}h1{font-family:var(--display);font-size:clamp(2.55rem,8vw,5.2rem);font-weight:800;line-height:1.03;letter-spacing:-.04em;color:#fff;margin-bottom:clamp(16px,3vw,28px)}h1 em{font-style:normal;color:var(--accent)}.hero-desc{font-size:clamp(.9rem,1rem + .1vw,1.05rem);color:var(--muted);max-width:650px;line-height:1.8;margin-bottom:clamp(28px,4vw,40px)}.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(36px,6vw,56px)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:clamp(10px,1.5vw,13px) clamp(16px,2vw,22px);border-radius:99px;font-size:clamp(.8rem,.88rem,.92rem);font-weight:600;border:1px solid var(--border2);transition:all .18s;cursor:pointer;white-space:nowrap}.btn:hover{transform:translateY(-1px)}.btn-accent{background:var(--accent);color:var(--ink);border-color:transparent;font-weight:800}.btn-accent:hover{background:#f0ff6a;box-shadow:0 0 28px rgba(var(--accent-rgb),.28)}.btn-outline{background:transparent;color:var(--text)}.btn-outline:hover{background:rgba(255,255,255,.06)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.hero-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:clamp(12px,2vw,18px);transition:border-color .2s}.hero-stat:hover{border-color:var(--border2)}.hero-stat-num{font-family:var(--display);font-weight:800;color:#fff;line-height:1;margin-bottom:5px;font-size:clamp(1.05rem,2.5vw,1.55rem)}.hsn-accent{color:var(--accent)}.hero-stat-label{font-size:clamp(.68rem,.75rem,.82rem);color:var(--muted);line-height:1.45;font-family:var(--mono)}
+section{padding:clamp(60px,8vw,100px) 0;position:relative}.section-line{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent)}.section-header{margin-bottom:clamp(36px,5vw,64px)}.s-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:8px}.s-tag::before{content:'';width:16px;height:1px;background:var(--faint);flex-shrink:0}h2{font-family:var(--display);font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1.1}.s-lead{margin-top:12px;font-size:clamp(.88rem,.96rem,1rem);color:var(--muted);max-width:640px;line-height:1.8}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:clamp(18px,2.5vw,28px);transition:border-color .2s,background .18s}.card:hover{background:var(--surface2);border-color:var(--border2)}.card h3{font-family:var(--display);font-size:clamp(1rem,1.5vw,1.25rem);font-weight:700;color:#fff;line-height:1.25;margin-bottom:12px}.card p,.card li{font-size:.88rem;color:var(--muted);line-height:1.75}.card ul{list-style:none;padding:0}.card li{padding:5px 0 5px 16px;position:relative}.card li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.72rem}.pill{display:inline-flex;font-family:var(--mono);font-size:.65rem;letter-spacing:.06em;color:var(--accent);background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.2);border-radius:99px;padding:3px 9px;margin-bottom:12px}
+.timeline{position:relative;display:grid;gap:12px}.timeline::before{content:'';position:absolute;left:13px;top:8px;bottom:8px;width:1px;background:var(--border2)}.t-item{position:relative;padding-left:42px}.t-dot{position:absolute;left:6px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(var(--accent-rgb),.08)}.t-date{font-family:var(--mono);font-size:.7rem;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}.t-title{font-family:var(--display);font-weight:700;color:#fff;letter-spacing:-.01em}.t-text{font-size:.84rem;color:var(--muted)}
+.exp-meta{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}.exp-org-name{font-family:var(--display);font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}.exp-org-label{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.06em}.exp-period{font-family:var(--mono);font-size:.72rem;color:var(--faint);white-space:nowrap}.exp-desc{font-size:clamp(.88rem,.95rem,1rem);color:var(--muted);line-height:1.8;margin-bottom:clamp(24px,4vw,40px);max-width:780px}.impact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:clamp(24px,4vw,40px);border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}.impact-item{background:var(--surface);padding:clamp(16px,2.5vw,24px) clamp(14px,2vw,20px);text-align:center;border-right:1px solid var(--border);transition:background .18s}.impact-item:last-child{border-right:none}.impact-item:hover{background:#1c1f27}.impact-num{font-family:var(--display);font-size:clamp(1.1rem,2.4vw,1.8rem);font-weight:800;color:var(--accent);line-height:1;margin-bottom:5px}.impact-text{font-size:clamp(.68rem,.74rem,.8rem);color:var(--muted);line-height:1.5;font-family:var(--mono)}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.pcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:clamp(18px,2.5vw,28px);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s;position:relative;overflow:hidden}.pcard::before{content:'';position:absolute;inset:0;background:radial-gradient(500px at var(--mx,50%) var(--my,50%),rgba(var(--accent-rgb),.05),transparent 50%);pointer-events:none;opacity:0;transition:opacity .3s}.pcard:hover{border-color:rgba(var(--accent-rgb),.25);transform:translateY(-2px)}.pcard:hover::before{opacity:1}.p-tags{display:flex;flex-wrap:wrap;gap:5px}.p-tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;color:var(--accent);background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.2);border-radius:99px;padding:3px 9px}.pcard h3{font-family:var(--display);font-size:clamp(.98rem,1.3vw,1.16rem);font-weight:700;color:#fff;line-height:1.25;letter-spacing:-.01em}.pcard p{font-size:.84rem;color:var(--muted);line-height:1.7}.pcard strong{color:#fff}.p-links{display:flex;gap:7px;flex-wrap:wrap}.p-link{font-family:var(--mono);font-size:.72rem;padding:7px 13px;border-radius:99px;border:1px solid var(--border2);color:var(--muted);transition:color .15s,border-color .15s}.p-link:hover{color:var(--accent);border-color:rgba(var(--accent-rgb),.4)}.p-link.prim{background:var(--accent);color:var(--ink);border-color:transparent;font-weight:800}
+.img-duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:28px}.img-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}.img-card img{width:100%;height:clamp(170px,25vw,230px);object-fit:cover;display:block;transition:transform .4s ease}.img-card:hover img{transform:scale(1.03)}.img-cap{padding:10px 14px;font-family:var(--mono);font-size:.68rem;color:var(--faint);border-top:1px solid var(--border);background:var(--surface)}
+.skills-table-wrap{border:1px solid var(--border);border-radius:var(--r);overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;min-width:850px}thead th{background:rgba(255,255,255,.03);font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding:13px 18px;text-align:left;font-weight:400;border-bottom:1px solid var(--border)}tbody td{padding:18px;font-size:.82rem;color:var(--muted);border-bottom:1px solid var(--border);vertical-align:top;line-height:1.65}tbody tr:last-child td{border-bottom:none}tbody tr:hover td{background:var(--surface2)}.td-name{font-family:var(--display);font-weight:700;font-size:.9rem;color:#fff!important}.tools-grid{display:flex;flex-wrap:wrap;gap:8px}.tool{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:9px 14px;font-size:.82rem;color:var(--muted);font-family:var(--mono);transition:border-color .15s,color .15s,background .15s}.tool:hover{border-color:rgba(var(--accent-rgb),.35);color:var(--text);background:#1c1f27}.tool-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.5;flex-shrink:0}
+#contact{background:var(--ink2);border-top:1px solid var(--border)}.contact-grid{display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,60px);align-items:center}.contact-headline{font-family:var(--display);font-size:clamp(1.6rem,4vw,3.2rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px}.contact-headline span{color:var(--accent)}.contact-sub{font-size:clamp(.88rem,.95rem,1rem);color:var(--muted);max-width:520px;line-height:1.8}.contact-btns{display:flex;flex-direction:column;gap:9px;align-items:flex-end}footer{border-top:1px solid var(--border);padding:20px clamp(16px,4vw,40px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}footer p{font-family:var(--mono);font-size:.7rem;color:var(--faint)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.grid-2,.projects{grid-template-columns:1fr}.impact-row{grid-template-columns:repeat(2,1fr)}.impact-item:nth-child(2n){border-right:none}.contact-grid{grid-template-columns:1fr}.contact-btns{align-items:flex-start;flex-direction:row;flex-wrap:wrap}.nav-links a:nth-child(n+5){display:none}}
+@media(max-width:640px){.nav-links{display:none}.hero-stats{grid-template-columns:1fr}.impact-row{grid-template-columns:1fr}.impact-item{border-right:none;border-bottom:1px solid var(--border)}.impact-item:last-child{border-bottom:none}.exp-meta{flex-direction:column}.btn{width:100%;justify-content:center}.hero-ctas{flex-direction:column}}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <a href="#accueil" class="text-base font-bold tracking-tight text-slate-900 sm:text-lg">Abou Diop</a>
-      <div class="hidden items-center gap-5 text-sm font-medium md:flex">
-        <a href="#alternance" class="text-slate-600 transition hover:text-primary">Alternance</a>
-        <a href="#projets" class="text-slate-600 transition hover:text-primary">Projets</a>
-        <a href="#competences" class="text-slate-600 transition hover:text-primary">Compétences</a>
-        <a href="#outils" class="text-slate-600 transition hover:text-primary">Outils</a>
-        <a href="#video" class="text-slate-600 transition hover:text-primary">Vidéo</a>
-        <a href="#contact" class="text-slate-600 transition hover:text-primary">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="pt-24">
-    <section id="accueil" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-      <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
-          <p class="inline-flex rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-primary">Portfolio Data Analyst Junior</p>
-          <h1 class="mt-5 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Étudiant en BUT Science des Données, je développe un profil orienté <span class="text-primary">analyse, BI et datavisualisation</span>.
-          </h1>
-          <p class="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-            Ce portfolio présente mon alternance au Secrétariat Général de la Garde Nationale, mes projets universitaires en SQL, BI et modélisation, ainsi que les compétences que je souhaite mettre au service d’un poste de Data Analyst Junior.
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="CV_Data_diop.pdf" class="rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5">Télécharger mon CV</a>
-            <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">LinkedIn</a>
-            <a href="https://github.com/abou750" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">GitHub</a>
-          </div>
-
-          <div class="mt-10 grid gap-4 sm:grid-cols-3">
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
-              <p class="text-sm text-slate-500">Cible</p>
-              <p class="mt-2 text-sm font-semibold text-slate-900 sm:text-base">Data Analyst Junior</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
-              <p class="text-sm text-slate-500">Spécialité</p>
-              <p class="mt-2 text-sm font-semibold text-slate-900 sm:text-base">SQL, BI, datavisualisation</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
-              <p class="text-sm text-slate-500">Disponibilité</p>
-              <p class="mt-2 text-sm font-semibold text-slate-900 sm:text-base">À partir de septembre </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-soft sm:p-8">
-          <h2 class="text-2xl font-bold text-slate-900">En quelques points</h2>
-          <ul class="mt-6 space-y-4 text-sm leading-7 text-slate-600">
-            <li>• Alternance au <strong>SGGN</strong> avec travail sur des tableaux de bord et des indicateurs sous <strong>Qlik Sense</strong>.</li>
-            <li>• Projets universitaires en <strong>SQL</strong>, <strong>Metabase</strong>, <strong>Tableau</strong> et modélisation de base de données.</li>
-            <li>• Sensibilité forte à la <strong>qualité des données</strong>, à la lisibilité des restitutions et à l’utilité métier des indicateurs.</li>
-            <li>• Progression marquée sur la communication, l’autonomie et la prise d’initiative.</li>
-          </ul>
-          <div class="mt-6 rounded-2xl bg-secondary p-4 text-sm leading-7 text-primary">
-            Ce site est volontairement pensé pour une lecture rapide : un recruteur doit pouvoir comprendre en quelques secondes ce que j’ai fait, avec quels outils, et ce que cela dit de mon profil.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="alternance" class="border-y border-slate-200 bg-white">
-      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Alternance</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">SGGN — Qlik Sense, fiabilisation des données et organisation du travail</h2>
-          <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-            Mon alternance au Secrétariat Général de la Garde Nationale est l’expérience la plus structurante de mon parcours. J’y ai travaillé sur un infocentre Qlik Sense utilisé pour le pilotage des conventions et la production d’indicateurs à destination de la direction.
-          </p>
-        </div>
-
-        <div class="mt-10 grid gap-6 lg:grid-cols-3">
-          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
-            <h3 class="text-xl font-bold text-slate-900">📊 Ce que j’ai fait</h3>
-            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-              <li>• Correction d’erreurs de chargement dans Qlik Sense lorsque les fichiers sources évoluaient.</li>
-              <li>• Ajustements du script et vérification de la cohérence des indicateurs en préproduction.</li>
-              <li>• Intégration d’un référentiel APE / SGDSN pour enrichir l’analyse par secteur d’activité.</li>
-              <li>• Amélioration de la lisibilité de certains tableaux de bord.</li>
-            </ul>
-          </article>
-
-          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
-            <h3 class="text-xl font-bold text-slate-900">🧠 Ce que j’ai appris</h3>
-            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-              <li>• En entreprise, les données sont rarement aussi propres qu’en cours.</li>
-              <li>• Le pré-traitement et la fiabilisation ne sont pas des étapes secondaires.</li>
-              <li>• Un indicateur utile n’est pas seulement correct techniquement : il doit aussi être lisible et cohérent.</li>
-              <li>• Il faut savoir demander de l’aide au bon moment au lieu de rester bloqué trop longtemps.</li>
-            </ul>
-          </article>
-
-          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
-            <h3 class="text-xl font-bold text-slate-900">📌 Organisation</h3>
-            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-              <li>• Utilisation de la méthode <strong>Kanban</strong> via <strong>Resana</strong>.</li>
-              <li>• Suivi des tâches entre « À faire », « En cours » et « Terminé ».</li>
-              <li>• Priorisation des demandes avec mon tuteur et l’équipe.</li>
-              <li>• Développement progressif de mon autonomie et de ma prise d’initiative.</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="mt-8 grid gap-6 lg:grid-cols-2">
-          <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
-            <img src="modele_sggn.jpeg" alt="Modèle de données Qlik Sense" class="w-full object-contain max-h-[420px] mx-auto" />
-            <p class="mt-3 text-sm leading-6 text-slate-500">Modèle de données utilisé dans Qlik Sense, notamment pour la liaison avec le référentiel APE.</p>
-          </div>
-          <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
-            <img src="dashboard_qlik.jpeg" alt="Tableau de bord Qlik Sense" class="w-full object-contain max-h-[420px] mx-auto" />
-            <p class="mt-3 text-sm leading-6 text-slate-500">Exemple de tableau de bord utilisé pour le suivi et le pilotage des conventions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projets" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-      <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Projets universitaires</p>
-        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">4 projets pour montrer mon profil data</h2>
-        <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-          J’ai sélectionné les projets les plus utiles pour un recruteur : ils montrent des compétences différentes, mais complémentaires, entre SQL, BI, visualisation et modélisation.
-        </p>
-      </div>
-
-      <div class="mt-10 grid gap-6 lg:grid-cols-2">
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-2xl font-bold text-slate-900">🧩 SAE 502 — Migration SQL ⇄ NoSQL</h3>
-          <p class="mt-4 text-sm leading-7 text-slate-600">
-            Projet autour de la migration de données entre SQL et NoSQL, avec une logique d’abstraction entre la couche métier et la couche de persistance.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
-            <li>• Travail sur la normalisation et la dénormalisation.</li>
-            <li>• Réflexion sur la séparation entre logique métier et stockage.</li>
-            <li>• Projet marquant pour moi, car j’avais tendance au départ à vouloir tout résoudre en Python.</li>
-            <li>• Il m’a obligé à revenir aux fondamentaux de modélisation et de structure des données.</li>
-          </ul>
-        </article>
-
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-2xl font-bold text-slate-900">📈 Dataviz — Immobilier & transports</h3>
-          <p class="mt-4 text-sm leading-7 text-slate-600">
-            Projet mené sur Tableau pour étudier le lien entre le marché immobilier et la fréquentation des gares.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
-            <li>• Travail sur des données hétérogènes à croiser.</li>
-            <li>• Contrainte de temps et découverte de Tableau.</li>
-            <li>• Prise de recul importante : une visualisation ne vaut rien si la qualité des données n’est pas vérifiée en amont.</li>
-            <li>• Projet formateur sur le lien entre préparation des données et restitution finale.</li>
-          </ul>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="Projet_dataviz1.pdf" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">PDF du projet</a>
-            <a href="https://public.tableau.com/views/AbouNeilSelim/Existetilunerelationentrelimmobilieretlestransportsencommun" target="_blank" rel="noreferrer" class="rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Visualisation Tableau</a>
-          </div>
-        </article>
-
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-2xl font-bold text-slate-900">🗄️ SAE 101 — SQL & reporting</h3>
-          <p class="mt-4 text-sm leading-7 text-slate-600">
-            Premier projet autour de PostgreSQL et Metabase, à partir de données étudiantes.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
-            <li>• Mise en place d’un environnement simple d’analyse et de reporting.</li>
-            <li>• Utilisation de requêtes SQL de base pour explorer la base.</li>
-            <li>• Difficulté principale : savoir quoi analyser dans une base riche, pas seulement écrire une requête correcte.</li>
-            <li>• Projet qui m’a appris à partir d’une vraie question métier ou d’un cas concret.</li>
-          </ul>
-          <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4">
-            <img src="metabase_capture.jpeg" alt="Capture Metabase" class="w-full object-contain max-h-[320px] mx-auto" />
-          </div>
-        </article>
-
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-2xl font-bold text-slate-900">🧠 SAE 201 — Conception de base de données</h3>
-          <p class="mt-4 text-sm leading-7 text-slate-600">
-            Projet de conception complète d’une base de données à partir d’un modèle conceptuel autour de données étudiantes.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
-            <li>• Découverte et utilisation de la modélisation entité-association.</li>
-            <li>• Travail sur draw.io puis implémentation dans MySQL Workbench.</li>
-            <li>• Difficulté principale : bien structurer les relations entre tables.</li>
-            <li>• Projet important pour mieux comprendre la logique de construction d’une base cohérente.</li>
-          </ul>
-          <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4">
-            <img src="sae201_modelisation.jpeg" alt="Schéma de modélisation SAE 201" class="w-full object-contain max-h-[320px] mx-auto" />
-          </div>
-          <div class="mt-5">
-            <a href="SAE201_projet.pdf" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">PDF du projet SAE 201</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="competences" class="border-y border-slate-200 bg-white">
-      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Compétences</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Compétences BUT et recul critique</h2>
-          <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-            Cette partie condense ce que je sais faire aujourd’hui, mais aussi ce que j’ai appris de mes erreurs et ce que je veux encore améliorer.
-          </p>
-        </div>
-
-        <div class="mt-10 overflow-x-auto rounded-3xl border border-slate-200 shadow-soft">
-          <table class="min-w-full divide-y divide-slate-200 bg-white text-left text-sm">
-            <thead class="bg-slate-100 text-slate-700">
-              <tr>
-                <th class="px-5 py-4 font-semibold">Compétence</th>
-                <th class="px-5 py-4 font-semibold">Exemple concret</th>
-                <th class="px-5 py-4 font-semibold">Distanciation critique</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-200 text-slate-600">
-              <tr class="align-top">
-                <td class="px-5 py-5 font-semibold text-slate-900">Traiter</td>
-                <td class="px-5 py-5">Correction d’erreurs de chargement dans Qlik Sense, manipulation de bases SQL, travail sur des données étudiantes et institutionnelles.</td>
-                <td class="px-5 py-5">J’ai compris que le pré-traitement n’est pas une option. Je dois encore progresser pour mieux anticiper l’impact global de certaines modifications sur toute la chaîne de traitement.</td>
-              </tr>
-              <tr class="align-top bg-slate-50">
-                <td class="px-5 py-5 font-semibold text-slate-900">Analyser</td>
-                <td class="px-5 py-5">Travail sur des indicateurs Qlik Sense, analyses SQL, réflexion sur la pertinence des questions à poser aux données.</td>
-                <td class="px-5 py-5">Je me rends compte que savoir analyser, ce n’est pas seulement calculer. Il faut d’abord bien définir ce qu’on cherche à comprendre. C’est un point sur lequel je continue à progresser.</td>
-              </tr>
-              <tr class="align-top">
-                <td class="px-5 py-5 font-semibold text-slate-900">Valoriser</td>
-                <td class="px-5 py-5">Qlik Sense, Tableau et Metabase pour restituer les données de manière lisible et utile.</td>
-                <td class="px-5 py-5">Le projet Dataviz m’a montré qu’une visualisation peut être trompeuse si le nettoyage et la vérification en amont ne sont pas solides. La restitution doit rester au service de la compréhension.</td>
-              </tr>
-              <tr class="align-top bg-slate-50">
-                <td class="px-5 py-5 font-semibold text-slate-900">Modéliser</td>
-                <td class="px-5 py-5">SAE 201 sur la conception de base de données et SAE 502 sur la migration SQL ⇄ NoSQL.</td>
-                <td class="px-5 py-5">C’est la compétence que je trouve encore la plus exigeante. J’ai progressé, mais je sais que j’ai encore besoin de consolider ma capacité à raisonner en structure et pas seulement en outil.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="outils" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-      <div class="grid gap-8 lg:grid-cols-2">
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Outils</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Technologies réellement utilisées</h2>
-          <div class="mt-6 flex flex-wrap gap-3 text-sm">
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">SQL</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">PostgreSQL</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">MySQL</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">MongoDB </span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Qlik Sense</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Tableau</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Metabase</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Python</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Excel</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">draw.io</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">MySQL Workbench</span>
-            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Resana</span>
-          </div>
-        </article>
-
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Passeport culturel</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Ouvertures et environnements découverts</h2>
-          <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-600">
-            <li>• Participation à l’événement <strong>Honneur aux Réserves</strong> à l’Hôtel de Brienne.</li>
-            <li>• Visite de la base navale de Toulon lors d’un séminaire.</li>
-            <li>• Exposition à la Porte de Versailles.</li>
-          </ul>
-          <p class="mt-5 text-sm leading-7 text-slate-600">
-            Ces expériences m’ont permis de découvrir des environnements différents et de mieux comprendre que les données s’inscrivent toujours dans un contexte humain, organisationnel et institutionnel.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="video" class="border-y border-slate-200 bg-white">
-      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Vidéo</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Présentation rapide du portfolio</h2>
-          <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-            Espace prévu pour une courte vidéo de présentation. L’idée est de proposer plus tard une vidéo simple de 30 à 60 secondes pour présenter mon parcours, mes projets et mon positionnement.
-          </p>
-        </div>
-
-        <div class="mt-8 aspect-video overflow-hidden rounded-3xl border border-dashed border-slate-300 bg-slate-100 shadow-soft">
-          <div class="flex h-full items-center justify-center p-6 text-center text-sm leading-7 text-slate-500">
-            Intégration YouTube à venir — remplace ce bloc par l’iframe de la vidéo quand elle sera prête.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-slate-900">
-      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-14 text-white sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8 lg:py-20">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">Contact</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight">Disponible pour échanger autour d’un poste de Data Analyst Junior</h2>
-          <p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-            Je souhaite continuer à progresser sur des problématiques d’analyse, de BI et de restitution de données. Ce portfolio donne un aperçu de ma manière de travailler, de mes projets et de ma progression.
-          </p>
-        </div>
-        <div class="flex flex-col gap-4 lg:items-end">
-          <a href="mailto:aboudiop@icloud.com" class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5">aboudiop@icloud.com</a>
-          <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:border-blue-300 hover:text-blue-300">LinkedIn</a>
-          <a href="CV_Data_diop.pdf" class="rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:border-blue-300 hover:text-blue-300">Télécharger le CV</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-slate-950 py-6 text-center text-sm text-slate-400">
-    <p>© 2026 Abou Diop — Portfolio recruteur</p>
-  </footer>
+<body>
+<nav>
+  <div class="nav-brand"><span class="nav-dot"></span>Abou Diop</div>
+  <div class="nav-links">
+    <a href="#parcours">Parcours</a><a href="#projets">Projets</a><a href="#alternance">Alternance</a><a href="#competences">Compétences</a><a href="#vision">Vision</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+<section id="hero">
+  <div class="hero-bg-text" aria-hidden="true">DATA</div>
+  <div class="hero-content">
+    <div class="hero-tag">Portfolio BUT Science des Données · Data Analyst Junior · Paris</div>
+    <h1>Abou<br><em>Diop.</em></h1>
+    <p class="hero-desc">Étudiant en 3e année de BUT Science des Données, je construis mon profil de Data Analyst junior entre exigence académique, alternance au Ministère des Armées et prise de recul sur mes méthodes de travail.</p>
+    <div class="hero-ctas"><a href="CV_Data_diop.pdf" class="btn btn-accent">Télécharger mon CV</a><a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="btn btn-outline">LinkedIn</a><a href="https://github.com/abou750" target="_blank" rel="noreferrer" class="btn btn-outline">GitHub</a></div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num hsn-accent">3 ans</div><div class="hero-stat-label">alternance institutionnelle</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">BUT SD</div><div class="hero-stat-label">Université Sorbonne Paris Nord</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">SQL · BI</div><div class="hero-stat-label">Qlik Sense · Tableau · Power BI</div></div>
+    </div>
+  </div>
+</section>
+<div class="section-line"></div>
+<section id="parcours"><div class="wrap">
+  <div class="section-header reveal"><div class="s-tag">Parcours</div><h2>Une progression vers la data décisionnelle</h2><p class="s-lead">Cette frise résume les étapes qui ont construit mon profil : bases scientifiques, formation data, alternance et objectif professionnel.</p></div>
+  <div class="grid-2">
+    <div class="card reveal"><h3>Frise chronologique</h3><div class="timeline">
+      <div class="t-item"><span class="t-dot"></span><div class="t-date">Sept. 2019 — Juin 2022</div><div class="t-title">Lycée Janson-de-Sailly</div><div class="t-text">Baccalauréat général, spécialités Mathématiques et Numérique & Sciences Informatiques.</div></div>
+      <div class="t-item"><span class="t-dot"></span><div class="t-date">Sept. 2022 — Sept. 2026</div><div class="t-title">BUT Science des Données</div><div class="t-text">Université Sorbonne Paris Nord : statistiques, programmation, bases de données, BI et datavisualisation.</div></div>
+      <div class="t-item"><span class="t-dot"></span><div class="t-date">Sept. 2023 — Sept. 2026</div><div class="t-title">Chargé de mission — Data Analyst</div><div class="t-text">Ministère des Armées, Secrétariat Général de la Garde Nationale : tableaux de bord, fiabilisation et indicateurs de pilotage.</div></div>
+      <div class="t-item"><span class="t-dot"></span><div class="t-date">À partir de sept. 2026</div><div class="t-title">Objectif : Data Analyst junior</div><div class="t-text">Rechercher un poste de Data Analyst junior, avec la possibilité d’envisager un master en alternance si l’opportunité est cohérente avec mon projet professionnel.</div></div>
+    </div></div>
+    <div class="card reveal"><span class="pill">Ligne directrice</span><h3>De l’outil vers l’usage métier</h3><p>C’est au cours de mon alternance que j’ai confirmé mon intérêt pour le métier de Data Analyst. J’ai compris que j’aimais produire des tableaux de bord qui ne servent pas seulement à visualiser des données, mais qui aident réellement à la prise de décision.</p><br><p>Au début de ma formation, j’abordais souvent les projets par l’outil : SQL, Python, Tableau ou Qlik. Avec l’expérience, j’ai compris que la technique n’est pas toujours le plus difficile : le véritable enjeu est de comprendre ce que l’on fait, pourquoi on le fait et où l’on veut aller.</p></div>
+  </div>
+</div></section>
+<div class="section-line"></div>
+<section id="projets"><div class="wrap">
+  <div class="section-header reveal"><div class="s-tag">Projets marquants</div><h2>Des projets où j’ai appris autant de mes blocages que de mes résultats</h2><p class="s-lead">Je conserve uniquement les projets réellement détaillés dans mon parcours, afin d’éviter les sections artificielles ou incomplètes.</p></div>
+  <div class="projects reveal">
+    <article class="pcard"><div class="p-tags"><span class="p-tag">SQL</span><span class="p-tag">NoSQL</span><span class="p-tag">Modélisation</span></div><h3>SAE S502 — Migration SQL ⇄ NoSQL par abstraction</h3><p><strong>Contexte.</strong> Concevoir et manipuler des données indépendamment du mode de persistance, relationnel ou non relationnel, avec normalisation, dénormalisation, logique DAO/ORM et séparation entre métier et persistance.</p><p><strong>Défi.</strong> J’ai eu du mal au départ, car j’avais perdu certains réflexes SQL et mon premier réflexe était de tout résoudre avec Python.</p><p><strong>Recul.</strong> Ce projet m’a obligé à revenir aux fondamentaux : raisonner en architecture et en modèle de données avant de choisir l’outil.</p></article>
+    <article class="pcard"><div class="p-tags"><span class="p-tag">Tableau</span><span class="p-tag">Excel</span><span class="p-tag">Dataviz</span></div><h3>Dataviz — Immobilier & transports</h3><p><strong>Contexte.</strong> Étude du lien entre ventes immobilières et fréquentation des gares, avec préparation des données et restitution sous Tableau.</p><p><strong>Défi.</strong> Tableau était encore récent pour moi et la contrainte de temps nous a poussés à visualiser trop vite, sans contrôle suffisant des données.</p><p><strong>Recul.</strong> Une dataviz convaincante ne repose pas d’abord sur l’esthétique : elle dépend surtout de la qualité du nettoyage et de la vérification en amont.</p><div class="p-links"><a href="https://public.tableau.com/views/AbouNeilSelim/Existetilunerelationentrelimmobilieretlestransportsencommun" target="_blank" rel="noreferrer" class="p-link prim">Voir sur Tableau ↗</a></div></article>
+    <article class="pcard"><div class="p-tags"><span class="p-tag">Qlik Sense</span><span class="p-tag">BI</span><span class="p-tag">Production</span></div><h3>Infocentre SGGN — Pilotage des conventions</h3><p><strong>Contexte.</strong> Maintenance et amélioration continue d’un infocentre Qlik Sense en production pour produire des indicateurs de pilotage au SGGN.</p><p><strong>Défi.</strong> Les fichiers sources évoluent : colonnes supprimées, règles de gestion modifiées, besoin de vérifier l’impact sur les indicateurs.</p><p><strong>Recul.</strong> Cette expérience m’a appris qu’un dashboard n’est fiable que si la chaîne de chargement, le modèle et les règles de calcul le sont aussi.</p><div class="p-links"><span class="p-link" style="opacity:.55">Contexte institutionnel — accès restreint</span></div></article>
+    <article class="pcard"><div class="p-tags"><span class="p-tag">SQL</span><span class="p-tag">Metabase</span><span class="p-tag">Reporting</span></div><h3>SAE S101 — Reporting à partir d’un SGBD relationnel</h3><p><strong>Contexte.</strong> Première expérience concrète de reporting : installation de PostgreSQL, import de données, requêtes SQL et visualisations Metabase.</p><p><strong>Apport.</strong> Ce projet m’a fait découvrir le rôle du décisionnel : transformer des données brutes en indicateurs lisibles pour des utilisateurs non techniques.</p><p><strong>Recul.</strong> Aujourd’hui, je documenterais davantage les choix de requêtes et je contrôlerais plus systématiquement la cohérence des résultats avant la restitution.</p></article>
+  </div>
+</div></section>
+<div class="section-line"></div>
+<section id="alternance"><div class="wrap">
+  <div class="section-header reveal"><div class="s-tag">Alternance</div><h2>SGGN — produire des indicateurs fiables, pas seulement des visuels</h2><p class="s-lead">Au Secrétariat Général de la Garde Nationale, j’ai travaillé sur l’amélioration continue d’un infocentre Qlik Sense et sur des missions transverses en environnement institutionnel.</p></div>
+  <div class="exp-meta reveal"><div><div class="exp-org-name">Secrétariat Général<br>de la Garde Nationale</div><div class="exp-org-label">Ministère des Armées</div></div><div class="exp-period">Sept. 2023 — Sept. 2026</div></div>
+  <p class="exp-desc reveal">Cette expérience m’a fait progresser techniquement, mais surtout dans ma manière d’aborder un besoin métier, de vérifier une donnée, de collaborer avec des interlocuteurs variés et de prioriser les tâches.</p>
+  <div class="impact-row reveal"><div class="impact-item"><div class="impact-num">Qlik</div><div class="impact-text">infocentre en production</div></div><div class="impact-item"><div class="impact-num">APE</div><div class="impact-text">référentiel sectoriel intégré</div></div><div class="impact-item"><div class="impact-num">Kanban</div><div class="impact-text">organisation via Resana</div></div><div class="impact-item"><div class="impact-num">Décideurs</div><div class="impact-text">indicateurs de pilotage</div></div></div>
+  <div class="grid-2 reveal">
+    <div class="card"><span class="pill">Mission technique</span><h3>Correction d’un chargement cassé</h3><p>Lorsqu’une mise à jour des fichiers Excel sources a supprimé certaines colonnes, le script Qlik Sense faisait encore référence à ces champs. J’ai analysé le script, retiré les références invalides, ajusté le chargement et vérifié le fonctionnement en préproduction.</p></div>
+    <div class="card"><span class="pill">Modèle de données</span><h3>Référentiel SGDSN via code APE</h3><p>J’ai intégré une nouvelle table de référence pour mieux classer les partenaires par secteur d’activité. Cette mission m’a montré que la qualité du modèle de données conditionne directement la pertinence des analyses.</p></div>
+    <div class="card"><span class="pill">Évolution personnelle</span><h3>D’une posture exécutive à une posture proactive</h3><p>Au début, je cherchais seul trop longtemps et je produisais sans toujours interroger la logique globale. Avec le temps, les échanges avec mon tuteur, les retours utilisateurs et la méthode Kanban m’ont aidé à poser des questions plus tôt et à mieux raisonner en priorité, usage et fiabilité.</p></div>
+    <div class="card"><span class="pill">Missions transverses</span><h3>Découverte du monde professionnel</h3><p>J’ai aussi participé à des missions comme l’organisation d’événements institutionnels, la gestion d’accès et des mises à jour Drupal. Ces expériences m’ont fait comprendre qu’un profil data doit aussi savoir s’adapter au contexte, aux acteurs et aux contraintes du terrain.</p></div>
+  </div>
+  <div class="img-duo reveal"><div class="img-card"><img src="modele_sggn.jpeg" alt="Modèle de données Qlik Sense montrant la liaison via code APE" loading="lazy"><div class="img-cap">↳ Modèle de données Qlik Sense — liaison référentiel APE</div></div><div class="img-card"><img src="dashboard_qlik.jpeg" alt="Tableau de bord Qlik Sense de pilotage des conventions" loading="lazy"><div class="img-cap">↳ Dashboard Qlik Sense — suivi des conventions</div></div></div>
+</div></section>
+<div class="section-line"></div>
+<section id="competences"><div class="wrap">
+  <div class="section-header reveal"><div class="s-tag">Compétences BUT</div><h2>Auto-évaluation et distanciation critique</h2><p class="s-lead">Cette grille met en avant mes acquis, mais aussi les limites que j’ai identifiées et les points que je dois encore consolider.</p></div>
+  <div class="skills-table-wrap reveal"><table><thead><tr><th>Compétence</th><th>Ce que j’ai fait</th><th>Ce que cela montre</th><th>Distanciation critique</th></tr></thead><tbody>
+    <tr><td class="td-name">C1 — Traiter</td><td>Correction de scripts Qlik Sense, adaptation aux fichiers sources, vérification de la cohérence entre Excel et indicateurs.</td><td>Je sais manipuler une chaîne de traitement simple avec un objectif de fiabilisation.</td><td>Je dois anticiper davantage les effets d’une modification sur l’ensemble du flux.</td></tr>
+    <tr><td class="td-name">C2 — Analyser</td><td>Travail sur les indicateurs de pilotage, les filtres temporels et les règles de gestion du SGGN.</td><td>Je progresse dans le lien entre besoin métier, logique de calcul et interprétation.</td><td>Je dois formaliser plus tôt les hypothèses et règles avant de produire un indicateur.</td></tr>
+    <tr><td class="td-name">C3 — Valoriser</td><td>Amélioration de visualisations Qlik Sense et réalisation de dataviz sous Tableau.</td><td>Je vois la visualisation comme une traduction utile pour l’utilisateur final.</td><td>Le projet Dataviz m’a montré qu’une belle sortie ne compense pas des données mal préparées.</td></tr>
+    <tr><td class="td-name">C4 — Modéliser</td><td>SAE S502 : normalisation, dénormalisation, séparation métier/persistance. Alternance : modèle relié via le code APE.</td><td>Je progresse dans ma capacité à penser la donnée en structure.</td><td>C’est encore ma marge de progression principale : raisonner davantage en schéma et dépendances avant de coder.</td></tr>
+  </tbody></table></div>
+</div></section>
+<div class="section-line"></div>
+<section id="outils"><div class="wrap">
+  <div class="section-header reveal"><div class="s-tag">Stack technique</div><h2>Outils mobilisés</h2><p class="s-lead">Des outils utilisés en projets universitaires et en situation professionnelle.</p></div>
+  <div class="tools-grid reveal"><span class="tool"><span class="tool-dot"></span>SQL</span><span class="tool"><span class="tool-dot"></span>PostgreSQL</span><span class="tool"><span class="tool-dot"></span>MongoDB</span><span class="tool"><span class="tool-dot"></span>Qlik Sense</span><span class="tool"><span class="tool-dot"></span>Tableau</span><span class="tool"><span class="tool-dot"></span>Metabase</span><span class="tool"><span class="tool-dot"></span>Power BI</span><span class="tool"><span class="tool-dot"></span>Python</span><span class="tool"><span class="tool-dot"></span>R</span><span class="tool"><span class="tool-dot"></span>Excel avancé</span><span class="tool"><span class="tool-dot"></span>Resana</span><span class="tool"><span class="tool-dot"></span>Drupal</span></div>
+</div></section>
+<div class="section-line"></div>
+<section id="vision"><div class="wrap">
+  <div class="grid-2 reveal">
+    <div class="card"><span class="pill">Projet professionnel</span><h3>Pourquoi devenir Data Analyst ?</h3><p>C’est à travers mon alternance que j’ai compris que je voulais devenir Data Analyst. Ce qui me motive, c’est de produire des dashboards utiles, capables d’aider les équipes à comprendre une situation et à prendre de meilleures décisions.</p><br><p>Mon objectif principal après le BUT est d’intégrer un poste de Data Analyst junior. Une poursuite d’études en alternance, notamment en Data Analytics ou en Business Intelligence, reste une possibilité si elle me permet de continuer à progresser tout en gardant un lien fort avec le terrain professionnel.</p></div>
+    <div class="card"><span class="pill">Passeport culturel</span><h3>Ouvertures et expériences marquantes</h3><p>Mon alternance m’a exposé à des environnements institutionnels variés : Honneur aux Réserves à l’Hôtel de Brienne, visite de la base navale de Toulon, exposition à la Porte de Versailles et événement au Parc des Princes.</p><br><p>Ces expériences m’ont rappelé qu’un profil data utile ne doit pas seulement maîtriser des outils : il doit comprendre le contexte, les acteurs, les usages et les contraintes du terrain.</p></div>
+    <div class="card"><span class="pill">Fierté</span><h3>Ce dont je suis le plus fier</h3><p>Le projet dont je suis le plus fier est l’intégration du référentiel SGDSN basé sur les codes APE dans l’infocentre Qlik Sense du SGGN.</p><br><p>Cette mission m’a obligé à monter en compétence sur le chargement des données dans Qlik, à entrer dans le script, à comprendre les différentes étapes de transformation et à relier le référentiel au modèle existant. C’est là que j’ai le plus progressé, car j’ai mieux compris le lien entre les données sources, leur transformation et les indicateurs visibles dans les dashboards.</p></div>
+    <div class="card"><span class="pill">Apprentissage personnel</span><h3>Ma plus grande progression</h3><p>J’ai surtout gagné en compréhension métier et en organisation. Avant, je pensais beaucoup à la solution technique. Aujourd’hui, je comprends mieux que la technique n’est pas toujours le plus dur : le plus important est souvent de comprendre le besoin, les règles de gestion et l’objectif final de l’analyse.</p><br><p>Cette prise de recul m’aide à mieux prioriser, à poser de meilleures questions et à produire des indicateurs plus cohérents pour les utilisateurs.</p></div>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap"><div class="contact-grid reveal"><div><div class="s-tag">Contact</div><div class="contact-headline">Disponible à partir de<br><span>septembre 2026.</span></div><p class="contact-sub">Je recherche un poste de Data Analyst junior pour continuer à progresser sur l’analyse de données, la BI et la création de dashboards utiles à la prise de décision.</p></div><div class="contact-btns"><a href="mailto:aboudiop@icloud.com" class="btn btn-accent">aboudiop@icloud.com</a><a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="btn btn-outline">LinkedIn ↗</a><a href="CV_Data_diop.pdf" class="btn btn-outline">CV</a></div></div></div></section>
+<footer><p>© 2026 Abou Diop — Portfolio BUT Science des Données</p><p>Data Analyst Junior</p></footer>
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*.06)+'s';obs.observe(el);});
+document.querySelectorAll('.pcard').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',(e.clientX-r.left)+'px');card.style.setProperty('--my',(e.clientY-r.top)+'px');});});
+</script>
 </body>
 </html>
